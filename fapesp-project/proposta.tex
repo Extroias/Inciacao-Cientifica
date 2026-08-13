@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+
+\input{config.tex}
+
+\graphicspath{{images/}}
+\usepackage{subcaption}
+
+
+\begin{document}
+\onehalfspacing
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CAPA %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\pagestyle{empty}
+
+\begin{center}
+University of São Paulo\\
+Institute of Mathematics and Statistics\\
+Computer Science Department\\
+--\\
+\textit{Research Project for the Doctoral Fellowship
+\\São Paulo Research Foundation (FAPESP)}\\
+
+\hfill\\
+
+\begin{Large}
+    \textbf{Mapping and Mitigating Bottlenecks in the Linux Kernel Development Model}
+\end{Large}
+
+\hfill\\
+
+\textbf{Student}: David Tadokoro\\
+\textbf{Advisor}: Paulo Meirelles\\
+\textbf{Research Internship Abroad advisor}: Gregorio Robles (URJC)\\
+\textit{davidbtadokoro@usp.br, paulormm@ime.usp.br, grex@gsyc.urjc.es}
+\end{center}
+
+
+\begin{abstract}
+The Linux kernel, a FLOSS project with over 30 years of active development, is central to modern computing. Combined with system tools and utilities from the GNU Project, it forms the GNU/Linux ecosystem, which is fundamental for services in our society, such as the Internet, and ubiquitous in the bleeding edge of fields like Machine Learning. The development of Linux is based on the collaboration of thousands of developers worldwide who interact primarily through email and mailing lists. It is a unique development model involving many processes and practices (workflows) that extend beyond the technical aspects of software development. Despite its success, Linux relies on critical workflows and key personnel, raising concerns about sustainability and workforce renewal. As the codebase and community grow in size and complexity, the entry barrier for newcomers and the workload per maintainer should not increase simultaneously. More interestingly, significant time and resources are spent developing tools that address limitations in the Linux kernel development model that the practitioners feel in their day-to-day work, yet these challenges are underexplored in academia. This research project aims to: 1) propose taxonomies that accurately detail the workflows that define the Linux kernel development model and identify inherent bottlenecks; 2) mitigate bottlenecks by developing FLOSS tools that support the Linux ecosystem.\\
+
+\textbf{Keywords}: Linux, FLOSS, Linux kernel development model, FLOSS development model, bottleneck mitigation, software engineering.
+
+\end{abstract}
+
+\input{01_Introduction}
+\input{02_Objectives}
+\input{03_Justification}
+\input{04_ResearchMethods}
+\input{05_WorkplanSchedule}
+\input{06_Publications}
+
+\printbibliography
+\end{document}

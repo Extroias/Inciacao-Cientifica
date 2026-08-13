@@ -1,0 +1,81 @@
+\usepackage{graphicx, color}
+\usepackage{setspace}  %espaçamento entre linhas ABNT
+\usepackage{indentfirst}
+\usepackage{color}
+\usepackage{epigraph} %para quem quer colocar epigrafe
+\usepackage{todonotes}
+%\parindent=15ex
+%\oddsidemargin=1cm
+%\topmargin=-0.30cm
+%\textheight=22.5cm
+%\textwidth=15.1cm
+%\def \baselinestretch{1.5}
+\usepackage{scalefnt} %para mudar o tamanho da fonte
+\usepackage{amsmath}
+%Pacote Indice remissivo
+\usepackage{makeidx}
+\usepackage[english]{babel} % pacotes para figura/tabelas...
+\usepackage{graphicx, color}
+\usepackage{threeparttable}
+\usepackage{epigraph} %para quem quer colocar epigrafe
+\usepackage[all]{xy}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb}
+\usepackage{a4wide}
+\usepackage{aecompl}
+\usepackage{exscale}
+% \usepackage{cite}
+\usepackage{adjustbox}
+\usepackage{booktabs}
+%\usepackage[num]{abntcite}
+\usepackage[final]{hyperref} % adds hyper links inside the generated pdf file
+\usepackage{listings}
+\usepackage{titlesec}
+\usepackage{biblatex}
+\usepackage{rotating}
+\usepackage{comment}
+\usepackage{color, colortbl}
+
+
+\hypersetup{
+	colorlinks=true,       % false: boxed links; true: colored links
+	linkcolor=blue,        % color of internal links
+	citecolor=blue,        % color of links to bibliography
+	filecolor=magenta,     % color of file links
+	urlcolor=blue         
+}
+
+%formatacao da section
+\titleformat{\section}    
+       {\normalfont\fontfamily{phv}\fontsize{16}{17}\bfseries}
+       {\thesection.}{0.4em}{}
+\titleformat{\subsection}    
+       {\normalfont\fontfamily{phv}\fontsize{14}{17}\bfseries}
+       {\thesubsection.}{0.1em}{}
+       
+\titlelabel{\thetitle.\quad}
+\titlespacing{\section}{2pt}{20pt}{8pt}
+%\titlelabel{\thetitle.\bfseries\quad} %coloca o "." depois.
+
+
+\pagenumbering{arabic}
+
+\let\oldabstract\abstract
+\let\oldendabstract\endabstract
+\makeatletter
+\renewenvironment{abstract}
+{\renewenvironment{quotation}%
+               {\list{}{\addtolength{\leftmargin}{0.1cm}
+                        \listparindent 0cm%
+                        \itemindent    \listparindent%
+                        \rightmargin   \leftmargin%
+                        \parsep        \z@ \@plus\p@}%
+                \item\relax}%
+               {\endlist}%
+\oldabstract}
+{\oldendabstract}
+\makeatother
+
+\addbibresource{proposta.bib}
+
+\interfootnotelinepenalty=10000
