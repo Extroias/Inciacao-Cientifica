@@ -40,12 +40,14 @@ Computer Science Department\\
 
 
 \begin{abstract}
-The Linux Kernel, a FLOSS project that is a cornerstone of modern computing, is an ever expanding system. Not only that, its development is based on the collaboration of thousands of develops worldwide, interacting primarily through email and mailing lists. As such, bottlenecks and limitations in it's development model are expected to arise at some point. However, in conjunction with that, many developers spend significant time and resources into developing tools that address these problems. With these facts, there have been ongoing academic efforts to understand and analyse the Linux development model in order to propose solutions and develop FLOSS tools that support its ecossystem, aiming to ensure its longevity. This research project is a part of those academic efforts\cite{sbes}. More specifically, it aims to provide an analysis of the time in which changes (patches) to the main Linux Repository (upstream) take to be ported over to LTS branches(long term support versions of the Kernel). Since many modern computing projects rely on LTS versions, it stands to reason that critical changes to upstream, such as security updates, must be quickly ported to LTS. With this analysis the research aims to 1) provide a visualisation of data, to give developers quick insight in bottlenecks regarding porting, and 2) provide tools or solutions to such bottlenecks. 
+The Linux Kernel, a FLOSS project with over 30 years of active development, is a cornerstone of modern computing. Along with that, it is also a massive project that involves thousands of developers from across the globe and is always in constant change. However, its widespread usage means many hard to update systems cannot keep up with its changes and need more stable versions of the kernel. As such, the project provides many Long Term Support (LTS) versions, these are actively maintained versions that strive for maintainability. Consequently, maintaining older versions of a software means that important bugfixes made to the main Linux repository (upstream) need to be ported over to those versions, this process is called backporting. This is the process this research project aims to analyse. More specifically, it aims to provide an analysis of the time in which patches (changes) to the main Linux Repository take to be backported over to LTS branches. Since many modern computing projects rely on LTS versions, it stands to reason that critical changes to upstream, such as security updates, must be quickly ported to LTS. With this analysis the research aims to 1) provide a visualisation of data, to give developers quick insight in bottlenecks regarding porting, and 2) provide tools or solutions to such bottlenecks. 
 
 \textbf{Keywords}: Linux, FLOSS, Linux kernel development model, FLOSS development model, bottleneck mitigation, software engineering, backporting, LTS, lag
 visualisation.
 
 \end{abstract}
+
+\vfill
 
 \input{01_Introduction}
 \input{02_Objectives}
