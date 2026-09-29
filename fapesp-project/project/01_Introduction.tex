@@ -4,7 +4,7 @@
 The Operating System(OS) is an integral part of the vast majority of computing devices, with the kernel being it's core component. As such, the Linux kernel fills an important role in the computing world, being a Free/Libre/Open Source Software (FLOSS) that's highly customizable and free of licensing costs \cite{sbes}. Because of that, it is widely used across many sectors, such as machine learning, and embedded systems. 
 
 \subsection{The Linux kernel project structure}
-    The Linux kernel is a piece of software thats actively developed by thousands of developers across the globe, seeing contributions even from some companies. To propperly organize such a huge amount of contributors it's divided into subsystems, and each one of those has dedicated maintainers who oversee contributions to those subsystems.\cite{sbes}
+    The Linux kernel is a piece of software thats actively developed by thousands of developers across the globe, seeing contributions even from some companies. To properly organize such a huge amount of contributors the kernel is divided into subsystems, with each one of those having dedicated maintainers who oversee contributions to them.\cite{sbes}
 
     Those contributions are made by patches, which are text documents that describe the diference between two source trees. But contributions to the subsystems do not go directly to the Linus Torvald's repository(Linux's main tree, also called the upstream). Instead each one of the subsystems maintains a separate source tree and, at the start of development cycles selected changes to these trees are merged into the upstream. \cite{KernelDocs}
 
@@ -24,15 +24,17 @@ The Operating System(OS) is an integral part of the vast majority of computing d
 
 \subsubsection{Backporting}
 
-    The Linux kernel versioning and release system, means that it has many supported stable versions that rely on older development trees. This raises the issue of getting patches, which are usually bugfixes and security concerns, implemented into these stable versions, as the bugfixes implemented upstream may depend on features that are only on future versions.
+    The Linux kernel versioning and release system means that it has many supported stable versions that rely on older development trees. This raises the issue of getting patches, which are usually bugfixes and security concerns, implemented into these stable versions, as the bugfixes implemented upstream may depend on features that are only on future versions.
 
-    The task of adapting patches from newer versions of the software, to be compatible with older versions of software is called backporting. And this work is essential to proppely maintain the kernel's stable releases.
-    (source:????????????????)
+    The task of adapting patches from newer versions of the software, to be compatible with older versions of software is called backporting. And this work is essential to properly maintain the kernel's stable releases.
 
 \subsection{Problem Outline}
 
-    As LTS versions are used across many critical infrastructures across the computing world, it becomes essencial that those versions are free of major bugs, and more importantly, security issues. As such, patches that address thses issues upstream must be quickly backported to all LTS versions.
+    As LTS versions are used across many critical infrastructures across the computing world, it becomes essencial that those versions are free of major bugs, and more importantly, security issues. As such, patches that address these issues upstream must be quickly backported to all LTS versions.
 
-    This however poses a major challenge, as one patch has to be adapted to several different LTS versions, each one of which needing differnet adaptations. That means that most backporting patches experience a significant amount of delay (lag) between their inclusion into upstream to their backport to the several LTS releases.
+    This is because the time between a major security issue being fixed upstream, and it being ported into the LTS versions leaves a gap of vulnerability. And, during this gap many systems are vulnerable to known exploits.
 
-    This lag represents a potential problem in the kernel development workflow. As the time between a major security issue being fixed upstream, and it being ported into the LTS versions being used by critical and enterprise system leaves a gap of vulnerability where a issue is known, but many systems may still be vulnerable to it. (source:????????????????)  
+    This however poses a major challenge, as one patch has to be adapted to several different LTS versions, each one of which needing differnet adaptations. That means there exists an inherent delay associated with the backporting of patches.\cite{icpc22-backporting}
+
+    So while we cannot nullify the delay, it is still important to keep it to a mininum. Therefore, reasearching more in-depth how this backporting delay presents itself on the Linux Project can aid decisions in the current and future of the project's development.
+    
